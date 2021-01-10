@@ -10,5 +10,8 @@
     "scripts": {
         "build": "bazel build //...",
         "test": "bazel test //..."
+    },
+    "dependencies": {
+        "exported_macros": "file:../exported_macros-0.1.0.tgz"
     }
 }

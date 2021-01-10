@@ -1,5 +1,15 @@
+load("@build_bazel_rules_nodejs//:index.bzl", "pkg_npm")
 load(":index.bzl", "my_binary")
 
 my_binary(
     name = "binary",
+)
+
+pkg_npm(
+    name = "pkg",
+    package_name = "exported_macros",
+    srcs = [
+        "index.bzl",
+        "package.json",
+    ],
 )
